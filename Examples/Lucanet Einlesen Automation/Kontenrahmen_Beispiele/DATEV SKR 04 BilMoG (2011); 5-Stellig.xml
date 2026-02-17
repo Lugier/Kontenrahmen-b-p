@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AccountFramework versionID="1.0" nameData="3:DATEV SKR 04 BilMoG (2011); 5-Stellig" firstRangeIndex="0" lastRangeIndex="99999" financialPositionModelOID="1700">
+  <Description text="DATEV-Kontenrahmen nach dem Bilanzrichtlinien-Gesetz (SKR 04)\_CRLF_\Standardkontenrahmen (SKR) 04\_CRLF_\Gültig ab 2011\_CRLF_\00000 - 09999\_CRLF_\Anlage- und Kapitalkonten\_CRLF_\10000 - 19999\_CRLF_\Finanz- und Privatkonten\_CRLF_\20000 - 29999\_CRLF_\Abgrenzungskonten\_CRLF_\30000 - 39999\_CRLF_\Wareneingangs- und Bestandskonten\_CRLF_\40000 - 49999\_CRLF_\Betriebliche Aufwendungen\_CRLF_\70000 - 79999\_CRLF_\Bestände an Erzeugnissen\_CRLF_\80000 - 89999\_CRLF_\Erlöskonten\_CRLF_\90000 - 99999\_CRLF_\Vortragskonten und statistische Konten\_CRLF_\Stand: 12.01.2012, SLI\_CRLF_\" persistentStructure="453X9f0b88808080808080806d19ddcb43b094066f857fc3483d4eedfeccd89d1b236005a0ba71f244742c8d26c9c9b33ffe3d27ee6d62f48ac3e59d39eb5ffc1cf35e7384c25b6dbd2712bc024905d681ed6e9fd0820a6bc828b8203723f02fc3fbe73bbb5dcb08849beabecdc1d9948869e64c305830aca155530dfd119050ec1c800b24d0b02e06a84e0ae1e000bd8ce0228dce1bb019032377a796cca93f4740a8961e6d39d69643921e60ee9ca73d47399886149289aa36c9c00f1b14b4e609b52a20bfa74ac14a7fcb32f5da03a41b07ab13346cde823957a682b3fa49b0b23a1ee8a3def1dfa67bd2442a8084abf575d0c8d9a51927cc4a2be19862d0de29c509d7ac1af1070bd3e6e201c4dab3f5aaa842df6b278f999c14436504a1330c9480aeacd8da6024f613b1353a8a5471ecd841bf28688f57f21a2abb919506b9997cc7a34bda3feda79f6756e895bbeded17ed1def30545c19d6b968cd7d76a09f2de366dcc102bd511e68cdb055a17a50936d092e3f290e19a71ee8cff47dcddd1859de4bcccf34a7fa33cc7577e8cf74f6196a6f511e686db255b133690976c4575fd4679e5d798522672f1f3f5e7f698f0456575f663b0d659fb4ef5716c10d5a998080" headerTextType="0" footerTextType="0" individualHeaderText="" individualFooterText="" createOutlines="false" createTOC="false" maximalTOCDepth="3" zoomFactor="1.0" printProperty="LETTER_A4" />
+  <AssignedRootNumberRange nameData="417:20:de%25253BDE%25253BDeutsch%253B3:Nummernkreise, die zugeordnet werden sollen:;">
+    <NumberRange nameData="417:20:%253B3:Aktiva;">
+      <NumberRange nameData="417:20:%253B3:A. Anlageverm&amp;#246;gen;">
+        <NumberRange nameData="417:20:%253B3:I. Immaterielle Verm&amp;#246;gensgegenst&amp;#228;nde;">
+          <NumberRange nameData="417:20:%253B3:1. Entgteltlich erworbene Konzessionen, gewerbliche Schutzrechte und &amp;#228;hnliche Rechte und Werte sowie Lizenzen an solchen Rechte und Werten;" positionName="2. Konzessionen, gewerbliche Schutzrechte und ähnliche Rechte, Werte &amp; Lizenzen" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Entgteltlich erworbene Konzessionen, gewerbliche Schutzrechte und &amp;#228;hnliche Rechte und Werte sowie Lizenzen an solchen Rechte und Werten;" firstRangeIndex="1000" positionName="2. Konzessionen, gewerbliche Schutzrechte und ähnliche Rechte, Werte &amp; Lizenzen" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:2. Selbst geschaffene gewerbliche Schutzrechte und &amp;#228;hnliche Rechte und Werte;" firstRangeIndex="1430" positionName="1. Selbst geschaffene gewerbliche Schutzrechte und ähnliche Rechte und Werte" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:3. Gesch&amp;#228;fts- und Firmenwert;" positionName="3. Geschäfts- oder Firmenwert" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Gesch&amp;#228;fts- und Firmenwert;" firstRangeIndex="1500" positionName="3. Geschäfts- oder Firmenwert" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Verschmelzungsmehrwert;" firstRangeIndex="1600" positionName="3. Geschäfts- oder Firmenwert" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:4. Geleistete Anzahlungen auf imm. VG;" positionName="4. Geleistete Anzahlungen auf immaterielle Vemögensgegenstände" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Anzahlungen auf imm. VG;" firstRangeIndex="1700" positionName="4. Geleistete Anzahlungen auf immaterielle Vemögensgegenstände" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Anzahlungen auf Gesch&amp;#228;fts- und Firmenwert;" firstRangeIndex="1790" positionName="4. Geleistete Anzahlungen auf immaterielle Vemögensgegenstände" positionType="0" />
+          </NumberRange>
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:II. Sachanlagen;">
+          <NumberRange nameData="417:20:%253B3:1. Grundst&amp;#252;cke, grundst&amp;#252;cksgleiche Rechte und Bauten einschlie&amp;#223;lich der Bauten auf fremden Grundst&amp;#252;cken;" positionName="1. Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich Bauten auf fremden Grundstücken" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Grundst&amp;#252;cke;" firstRangeIndex="2000" positionName="1. Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich Bauten auf fremden Grundstücken" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Bauten auf eigenen Grundst&amp;#252;cken;" firstRangeIndex="2300" positionName="1. Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich Bauten auf fremden Grundstücken" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Bauten auf fremden Grundst&amp;#252;cken;" firstRangeIndex="3300" positionName="1. Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich Bauten auf fremden Grundstücken" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:2. Technische Anlagen und Maschinen;" firstRangeIndex="4000" positionName="2. Technische Anlagen und Maschinen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:3. Andere Anlagen, Betriebs- und Gesch&amp;#228;ftsausstattung;" positionName="3. Andere Anlagen, Betriebs. und Geschäftsausstattung" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Andere Anlagen, Betriebs- und Gesch&amp;#228;ftsausstattung;" firstRangeIndex="5000" positionName="3. Andere Anlagen, Betriebs. und Geschäftsausstattung" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Sonstige Ausleihungen;" firstRangeIndex="5400" positionName="3. Andere Anlagen, Betriebs. und Geschäftsausstattung" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Darlehen;" firstRangeIndex="5500" positionName="3. Andere Anlagen, Betriebs. und Geschäftsausstattung" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Genossenschaftsanteile;" firstRangeIndex="5700" positionName="3. Andere Anlagen, Betriebs. und Geschäftsausstattung" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Ausleihungen an Gesellschafter;" firstRangeIndex="5800" positionName="3. Andere Anlagen, Betriebs. und Geschäftsausstattung" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Ausleihungen an nahe stehende Personen;" firstRangeIndex="5900" positionName="3. Andere Anlagen, Betriebs. und Geschäftsausstattung" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:8. R&amp;#252;ckdeckungsanspr&amp;#252;che aus LV zum langfristigen Verbleib;" firstRangeIndex="5950" positionName="3. Andere Anlagen, Betriebs. und Geschäftsausstattung" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:4. geleistete Anzahlungen auf Anlagen im Bau;" positionName="4. Geleistete Anzahlungen auf immaterielle Vemögensgegenstände" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Anzahlungen auf Grundst&amp;#252;cke;" firstRangeIndex="7000" positionName="4. Geleistete Anzahlungen auf immaterielle Vemögensgegenstände" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Gesch&amp;#228;fts-, Fabrik- und andere Bauten auf eigenen Grundst&amp;#252;cken;" firstRangeIndex="7100" positionName="4. Geleistete Anzahlungen auf immaterielle Vemögensgegenstände" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Wohnbauten auf eigenen Grundst&amp;#252;cken;" firstRangeIndex="7250" positionName="4. Geleistete Anzahlungen auf immaterielle Vemögensgegenstände" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Gesch&amp;#228;fts-, Fabrik- und andere Bauten auf fremden Grundst&amp;#252;cken;" firstRangeIndex="7400" positionName="4. Geleistete Anzahlungen auf immaterielle Vemögensgegenstände" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:technische Anlagen und Maschinen;" firstRangeIndex="7700" positionName="4. Geleistete Anzahlungen auf immaterielle Vemögensgegenstände" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:andere Anlagen, Betriebs- und Gesch&amp;#228;ftsausstattung;" firstRangeIndex="7850" positionName="4. Geleistete Anzahlungen auf immaterielle Vemögensgegenstände" positionType="0" />
+          </NumberRange>
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:III. Finanzanlagen;">
+          <NumberRange nameData="417:20:%253B3:1. Anteile an verbundenen Unternehmen;" firstRangeIndex="8000" positionName="1. Anteile an verbundenen Unternehmen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:2. Ausleihungen an verbundene Unternehmen;" firstRangeIndex="8100" positionName="2. Ausleihungen an verbundene Unternehmen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:3. Beteiligungen;" firstRangeIndex="8200" positionName="3. Beteiligungen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:4. Ausleihungen an Unternehmen, mit denen ein Beteiligungsverh&amp;#228;ltnis besteht;" firstRangeIndex="8800" positionName="4. Ausleihungen an Unternehmen mit einem Beteiligungsverhältnis" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:5. Wertpapiere des Anlageverm&amp;#246;gens;" firstRangeIndex="9000" positionName="5. Wertpapiere des Anlagevermögens" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:6. Sonstige Ausleihungen;" firstRangeIndex="9300" positionName="6. Sonstige Ausleihungen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:7. Genossenschaftsanteile;" firstRangeIndex="9800" positionName="6. Sonstige Ausleihungen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:8. R&amp;#252;ckdeckungsanspr&amp;#252;che aus Lebensversicherungen;" firstRangeIndex="9900" positionName="6. Sonstige Ausleihungen" positionType="0" />
+        </NumberRange>
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:B. Umlaufverm&amp;#246;gen;">
+        <NumberRange nameData="417:20:%253B3:I. Vorr&amp;#228;te;">
+          <NumberRange nameData="417:20:%253B3:1. Roh-, Hilfs- und Betriebsstoffe;" firstRangeIndex="10000" positionName="1. Roh-, Hilfs- und Betriebsstoffe" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:2. Unfertige Erzeugnisse und Leistungen;" firstRangeIndex="10400" positionName="Unfertige Erzeugnisse, unfertige Leistungen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:3. In Ausf&amp;#252;hrung befindliche Auftr&amp;#228;ge;" firstRangeIndex="10900" positionName="Unfertige Erzeugnisse, unfertige Leistungen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:4. In Arbeit befindliche Auftr&amp;#228;ge;" firstRangeIndex="10950" positionName="Unfertige Erzeugnisse, unfertige Leistungen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:5. Fertige Erzeugnisse und Waren;" positionName="3. Fertige Erzeugnisse und Waren" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Fertige Erzeugnisse und Waren #1;" firstRangeIndex="11000" positionName="3. Fertige Erzeugnisse und Waren" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Fertige Erzeugnisse und Waren #2;" firstRangeIndex="11400" positionName="3. Fertige Erzeugnisse und Waren" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:6. Geleistete Anzahlungen;" firstRangeIndex="11800" positionName="4. Geleistete Anzahlungen auf Vorräte" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:7. Erhaltene Anzahlungen auf Bestellungen;" firstRangeIndex="11900" positionName="Erhaltene Anzahlungen" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:II. Forderungen und sonstige VG;">
+          <NumberRange nameData="417:20:%253B3:1. Forderungen aus Lieferungen und Leistungen;" positionName="II. Forderungen aus Lieferung und Leistung" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Ford L+L;" firstRangeIndex="12000" positionName="II. Forderungen aus Lieferung und Leistung" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:WB Ford L+L;" firstRangeIndex="12460" positionName="II. Forderungen aus Lieferung und Leistung" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Ford L+L Gesellschafter;" firstRangeIndex="12500" positionName="II. Forderungen aus Lieferung und Leistung" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Kreditorische Debitoren;" firstRangeIndex="12580" positionName="II. Forderungen aus Lieferung und Leistung" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:2. Forderungen verbundene Unternehmen;">
+            <NumberRange nameData="417:20:%253B3:Ford verb Unternehmen;" firstRangeIndex="12600" positionName="Ford. vU Sonstige" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Ford L+L verb Unternehmen;" firstRangeIndex="12700" positionName="Ford. vU aus L+L" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:WB Ford L+L verb Unternehmen;" firstRangeIndex="12760" positionName="Ford. vU aus L+L" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:3. Forderungen Beteiligungen;" positionName="2. Forderungen gegen Unternehmen mit einem Beteiligungsverhältnis" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Ford Beteiligungen;" firstRangeIndex="12800" positionName="2. Forderungen gegen Unternehmen mit einem Beteiligungsverhältnis" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Ford L+L Beteiligungen;" firstRangeIndex="12900" positionName="2. Forderungen gegen Unternehmen mit einem Beteiligungsverhältnis" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:WB Ford L+L Beteiligungen;" firstRangeIndex="12960" positionName="2. Forderungen gegen Unternehmen mit einem Beteiligungsverhältnis" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:Eingeforderte, noch ausstehende Kapitaleinlagen;" firstRangeIndex="12980" positionName="2. Forderungen gegen Unternehmen mit einem Beteiligungsverhältnis" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Eingeforderte Nachsch&amp;#252;sse;" firstRangeIndex="12990" positionName="2. Forderungen gegen Unternehmen mit einem Beteiligungsverhältnis" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:4. Sonstige Verm&amp;#246;gensgegenst&amp;#228;nde;">
+            <NumberRange nameData="417:20:%253B3:Sonstige VG #1;" firstRangeIndex="13000" positionName="Diverse sonstige Vermögensgegenstände" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Sonstige VG #2;" firstRangeIndex="13750" positionName="Diverse sonstige Vermögensgegenstände" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Sonstige VG #3;" firstRangeIndex="14950" positionName="Diverse sonstige Vermögensgegenstände" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Vorsteuer, Umsatzsteuerforderungen;" firstRangeIndex="13960" positionName="Forderungen aus Umsatzsteuer" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:&amp;#220;berleitungskonto KSt;" firstRangeIndex="14980" positionName="Forderungen aus Umsatzsteuer" positionType="0" />
+          </NumberRange>
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:III. Wertpapiere;" positionName="IV. Wertpapiere" positionType="0">
+          <NumberRange nameData="417:20:%253B3:1. Anteile an verbundenen Unternehmen;" firstRangeIndex="15000" positionName="IV. Wertpapiere" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:2. Eigene Anteile;" firstRangeIndex="15050" positionName="IV. Wertpapiere" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:3. sonstige Wertpapiere;" positionName="IV. Wertpapiere" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Sonstige Wertpapiere #1;" firstRangeIndex="15100" positionName="IV. Wertpapiere" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Sonstige Wertpapiere #2;" firstRangeIndex="15250" positionName="IV. Wertpapiere" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Finanzwechsel;" firstRangeIndex="15200" positionName="IV. Wertpapiere" positionType="0" />
+          </NumberRange>
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:IV. Kassenbestand, Bundesbankguthaben, Guthaben bei KI und Schecks;" positionName="V. Kassenbestand und Guthaben bei Kreditinstituten" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Schecks;" firstRangeIndex="15500" positionName="V. Kassenbestand und Guthaben bei Kreditinstituten" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Kasse;" firstRangeIndex="16000" positionName="V. Kassenbestand und Guthaben bei Kreditinstituten" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Postbank;" firstRangeIndex="17000" positionName="V. Kassenbestand und Guthaben bei Kreditinstituten" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Bank;" firstRangeIndex="18000" positionName="V. Kassenbestand und Guthaben bei Kreditinstituten" positionType="0" />
+        </NumberRange>
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:C. Rechnungsabgrenzungsposten;" firstRangeIndex="19000" positionName="C. Aktive Rechnungsabgrenzungspositionen" positionType="0" />
+      <NumberRange nameData="417:20:%253B3:D. Aktive latente Steuern;" firstRangeIndex="19500" positionName="D. Aktive latente Steuern" positionType="0" />
+    </NumberRange>
+    <NumberRange nameData="417:20:%253B3:Passiva;">
+      <NumberRange nameData="417:20:%253B3:A. Eigenkapital;">
+        <NumberRange nameData="417:20:%253B3:I. Gezeichnetes Kapital;" firstRangeIndex="29000" positionName="I. Gezeichnetes Kapital" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:II. Kapitalr&amp;#252;cklage;" firstRangeIndex="29200" positionName="II. Kapitalrücklagen" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:III. Gewinnr&amp;#252;cklagen;">
+          <NumberRange nameData="417:20:%253B3:1. gesetzliche R&amp;#252;cklage;" firstRangeIndex="29300" positionName="1. Gesetzliche Rücklage" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:2. R&amp;#252;cklage f&amp;#252;r Anteile an einem herrschenden oder mehrheitlich beteiligten Unternehmen;" firstRangeIndex="29350" positionName="2. Rücklage für eigene Anteile" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:3. R&amp;#252;cklage f&amp;#252;r eigene Anteile;" firstRangeIndex="29400" positionName="2. Rücklage für eigene Anteile" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:4. satzungsm&amp;#228;&amp;#223;ige R&amp;#252;cklagen;" firstRangeIndex="29500" positionName="3. Satzungsmäßige Rücklagen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:5. andere Gewinnr&amp;#252;cklagen;" firstRangeIndex="29600" positionName="4. Andere Gewinnrücklagen" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:IV. Gewinnvortrag/Verlustvortrag;" positionName="1. Vortrag manuell (Bilanz)" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Gewinnvortrag/Verlustvortrag #1;" firstRangeIndex="29700" positionName="1. Vortrag manuell (Bilanz)" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Vortrag auf neue Rechnung;" firstRangeIndex="29790" positionName="1. Vortrag manuell (Bilanz)" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:Eigene Anteile;" firstRangeIndex="29090" positionName="II. Kapitalrücklagen" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Nicht eingeforderte ausstehende Einlagen;" firstRangeIndex="29100" positionName="II. Kapitalrücklagen" positionType="0" />
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:B. R&amp;#252;ckstellungen;">
+        <NumberRange nameData="417:20:%253B3:1. Pensionsr&amp;#252;ckstellungen;" firstRangeIndex="30000" positionName="I. Rückstellungen für Pensionen und ähnliche Verpflichtungen" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:2. Steuerr&amp;#252;ckstellungen;" positionName="II. Steuerrückstellungen" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Steuerr&amp;#252;ckstellungen;" firstRangeIndex="30200" positionName="II. Steuerrückstellungen" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Umsatzsteuer nicht f&amp;#228;llig;" firstRangeIndex="38100" positionName="II. Steuerrückstellungen" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:3. Sonstige R&amp;#252;ckstellungen;" firstRangeIndex="30700" positionName="III. Sonstige Rückstellungen" positionType="0" />
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:C. Verbindlichkeiten;">
+        <NumberRange nameData="417:20:%253B3:1. Anleihen;" firstRangeIndex="31000" positionName="I. Anleihen" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:2. Verbindlichkeiten gegen&amp;#252;ber Kreditinstituten;" firstRangeIndex="31500" positionName="I. Girokonten im Minus" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:3. erhaltene Anzahlungen auf Bestellungen;" firstRangeIndex="32500" positionName="II. Erhaltene Anzahlungen auf Bestellungen" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:4. Verbindlichkeiten aus Lieferungen und Leistungen;" positionName="C. Verbindlichkeiten aus Lieferung und Leistung" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Verb L+L;" firstRangeIndex="33000" positionName="C. Verbindlichkeiten aus Lieferung und Leistung" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Verb L+L Gesellschafter;" firstRangeIndex="33400" positionName="C. Verbindlichkeiten aus Lieferung und Leistung" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Debitorische Kreditoren;" firstRangeIndex="33490" positionName="C. Verbindlichkeiten aus Lieferung und Leistung" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:5. Wechselverbindlichkeiten;" firstRangeIndex="33500" positionName="III. Verbindlichkeiten aus Wechselgeschäften" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:6. Verbindlichkeiten verbundene Unternehmen;">
+          <NumberRange nameData="417:20:%253B3:Verb verb Unternehmen;" firstRangeIndex="34000" positionName="2. Verb. vU Sonstige" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Verb L+L verb Unternehmen;" firstRangeIndex="34200" positionName="1. Verb. vU aus L+L" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:7. Verbindlichkeiten Beteiligungen;" positionName="V. Verbindlichkeiten gegen Unternehmen mit einem Beteiligungsverhältnis" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Verb Beteiligungen;" firstRangeIndex="34500" positionName="V. Verbindlichkeiten gegen Unternehmen mit einem Beteiligungsverhältnis" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Verb L+L Beteiligungen;" firstRangeIndex="34700" positionName="V. Verbindlichkeiten gegen Unternehmen mit einem Beteiligungsverhältnis" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:8. Sonstige Verbindlichkeiten;">
+          <NumberRange nameData="417:20:%253B3:Steuern;" positionName="1. Verbindlichkeiten aus Steuern" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Steuern #1;" firstRangeIndex="37000" positionName="1. Verbindlichkeiten aus Steuern" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Steuern #2;" firstRangeIndex="37260" positionName="1. Verbindlichkeiten aus Steuern" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Steuern #3;" firstRangeIndex="37600" positionName="1. Verbindlichkeiten aus Steuern" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Steuern #4;" firstRangeIndex="38000" positionName="1. Verbindlichkeiten aus Steuern" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Steuern #5;" firstRangeIndex="38170" positionName="1. Verbindlichkeiten aus Steuern" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Steuern #6;" firstRangeIndex="38200" positionName="1. Verbindlichkeiten aus Steuern" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Steuern #7;" firstRangeIndex="38540" positionName="1. Verbindlichkeiten aus Steuern" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:Soziale Sicherheit;" positionName="2. Verbindlichkeiten im Rahmen der sozialen Sicherheit" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Verb Soziale Sicherheit #1;" firstRangeIndex="37400" positionName="2. Verbindlichkeiten im Rahmen der sozialen Sicherheit" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Verb Soziale Sicherheit #2;" firstRangeIndex="37960" positionName="2. Verbindlichkeiten im Rahmen der sozialen Sicherheit" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:Lohn und Gehalt;" positionName="3. Diverse sonstige Verbindlichkeiten" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Lohn und Gehalt #1;" firstRangeIndex="37200" positionName="3. Diverse sonstige Verbindlichkeiten" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Lohn und Gehalt #2;" firstRangeIndex="37700" positionName="3. Diverse sonstige Verbindlichkeiten" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:Sonstiges;" positionName="3. Diverse sonstige Verbindlichkeiten" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Sonstiges #1;" firstRangeIndex="35000" positionName="3. Diverse sonstige Verbindlichkeiten" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Sonstiges #2;" firstRangeIndex="35400" positionName="3. Diverse sonstige Verbindlichkeiten" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Gesellschafter;" firstRangeIndex="35100" positionName="3. Diverse sonstige Verbindlichkeiten" positionType="0" />
+          </NumberRange>
+        </NumberRange>
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:D. Rechnungsabgrenzungsposten;" firstRangeIndex="39000" positionName="F. Passive Rechnungsabgrenzungspositionen" positionType="0" />
+      <NumberRange nameData="417:20:%253B3:E. Passive latente Steuern;" firstRangeIndex="30650" positionName="G. Passive latente Steuern" positionType="0" />
+    </NumberRange>
+    <NumberRange nameData="417:20:%253B3:Gewinn- und Verlustrechnung;">
+      <NumberRange nameData="417:20:%253B3:1. Umsatzerl&amp;#246;se;">
+        <NumberRange nameData="417:20:%253B3:Umsatzerl&amp;#246;se (Dritte);" positionName="Sonstige Umsätze" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Erl&amp;#246;se, brutto;" firstRangeIndex="40000" positionName="Sonstige Umsätze" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Umsatzsteuerverg&amp;#252;tung;" firstRangeIndex="46950" positionName="Sonstige Umsätze" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Erl&amp;#246;sschm&amp;#228;lerungen;" firstRangeIndex="47000" positionName="Sonstige Umsätze" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:gew&amp;#228;hrte Skonti;" firstRangeIndex="47300" positionName="Sonstige Umsätze" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:gew&amp;#228;hrte Boni;" firstRangeIndex="47400" positionName="Sonstige Umsätze" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:gew&amp;#228;hrte Rabatte;" firstRangeIndex="47700" positionName="Sonstige Umsätze" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Entnahmen;" firstRangeIndex="46100" positionName="Sonstige Umsätze" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Unentgeltliche Zuwendung von Waren;" firstRangeIndex="46700" positionName="Sonstige Umsätze" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstiges #1;" firstRangeIndex="45800" positionName="Sonstige Umsätze" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:Umsatzerl&amp;#246;se (Konzern);" positionName="Umsatzerlöse Intern" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Nicht steuerbare Ums&amp;#228;tze (Innenums&amp;#228;tze);" firstRangeIndex="46900" positionName="Umsatzerlöse Intern" positionType="0" />
+        </NumberRange>
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:2. Bestandsver&amp;#228;nderungen;" positionName="Bestandsveränderung UE/FE" positionType="0">
+        <NumberRange nameData="417:20:%253B3:Erh&amp;#246;hung des Bestands an fertigen und unfertigen Erzeugnissen;" firstRangeIndex="48000" positionName="Bestandsveränderung UE/FE" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Erh&amp;#246;hung des Bestands in Ausf&amp;#252;hrung befindlicher Bauauftr&amp;#228;ge;" firstRangeIndex="48160" positionName="Bestandsveränderung UE/FE" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Erh&amp;#246;hung des Bestands in Arbeit befindlicher Auftr&amp;#228;ge;" firstRangeIndex="48180" positionName="Bestandsveränderung UE/FE" positionType="0" />
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:3. andere aktivierte Eigenleistungen;" firstRangeIndex="48200" positionName="Andere aktivierte Eigenleistung" positionType="0" />
+      <NumberRange nameData="417:20:%253B3:4. sonstige betriebliche Ertr&amp;#228;ge;">
+        <NumberRange nameData="417:20:%253B3:Ertrag aus Anlagenabgang;" positionName="Neutrale sonstige Erträge" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Erl&amp;#246;se aus Verkauf (bei Buchgewinn);" firstRangeIndex="48440" positionName="Neutrale sonstige Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Abgang Restbuchwert (bei Buchgewinn);" firstRangeIndex="48550" positionName="Neutrale sonstige Erträge" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:Sonstiges;" positionName="Ordentliche sonstige Erträge" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Sonstiges #1;" firstRangeIndex="48300" positionName="Ordentliche sonstige Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstiges #2;" firstRangeIndex="49000" positionName="Ordentliche sonstige Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstiges #3;" firstRangeIndex="45700" positionName="Ordentliche sonstige Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:betriebsfremd, periodenfremd, unregelm&amp;#228;&amp;#223;ig #1;" firstRangeIndex="48370" positionName="Ordentliche sonstige Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:betriebsfremd, periodenfremd, unregelm&amp;#228;&amp;#223;ig #2;" firstRangeIndex="49600" positionName="Ordentliche sonstige Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Kursdifferenzen, Bewertung Finanzmittelfonds;" firstRangeIndex="48400" positionName="Ordentliche sonstige Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Grundst&amp;#252;cksertr&amp;#228;ge;" firstRangeIndex="48600" positionName="Ordentliche sonstige Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sachbez&amp;#252;ge;" firstRangeIndex="49400" positionName="Ordentliche sonstige Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:private Verwendung von Gegenst&amp;#228;nden;" firstRangeIndex="46300" positionName="Ordentliche sonstige Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:unentgeltliche Zuwendungen von Gegenst&amp;#228;nden;" firstRangeIndex="46860" positionName="Ordentliche sonstige Erträge" positionType="0" />
+        </NumberRange>
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:5. Materialaufwand;">
+        <NumberRange nameData="417:20:%253B3:a) Aufwendungen RHB, bezogene Waren;" positionName="Materialaufwand Extern" positionType="0">
+          <NumberRange nameData="417:20:%253B3:RHB;" positionName="Materialaufwand Extern" positionType="0">
+            <NumberRange nameData="417:20:%253B3:RHB, Energiestoffe (Fertigung);" firstRangeIndex="50000" positionName="Materialaufwand Extern" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:Bezogene Waren;" positionName="Materialaufwand Extern" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Wareneingang, Skonto, Nachl&amp;#228;sse etc.;" firstRangeIndex="52000" positionName="Materialaufwand Extern" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Verrechnete Stoffkosten;" firstRangeIndex="58600" positionName="Materialaufwand Extern" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Material-, Stoffverbrauch;" firstRangeIndex="58800" positionName="Materialaufwand Extern" positionType="0" />
+          </NumberRange>
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:b) Bezogene Leistungen;" firstRangeIndex="59000" positionName="Aufwendungen für bezogene Leistungen" positionType="0" />
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:6. Personalaufwand;">
+        <NumberRange nameData="417:20:%253B3:a) L&amp;#246;hne und Geh&amp;#228;lter;" firstRangeIndex="60000" positionName="Löhne und Gehälter" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:b) Soziale Abgaben und Aufwendungen f&amp;#252;r Altersversorgung und f&amp;#252;r Unterst&amp;#252;tzung;" firstRangeIndex="61000" positionName="Soziale Abgaben und Aufwendungen für Altersversorgung" positionType="0" />
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:7. Abschreibungen;">
+        <NumberRange nameData="417:20:%253B3:a) auf imm VG und Sachanlagen;" positionName="Abschreibungen auf VG des Anlagevermögens" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Abschreibungen;" firstRangeIndex="62000" positionName="Abschreibungen auf VG des Anlagevermögens" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Kaufleasing;" firstRangeIndex="62500" positionName="Abschreibungen auf VG des Anlagevermögens" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:GWG;" firstRangeIndex="62600" positionName="Abschreibungen auf VG des Anlagevermögens" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:b) auf Verm&amp;#246;gensgegenst&amp;#228;nde des Umlaufverm&amp;#246;gens;" firstRangeIndex="62700" positionName="Abschreibungen auf VG des Umlaufvermögens" positionType="0" />
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:8. Sonstige betriebliche Aufwendungen;">
+        <NumberRange nameData="417:20:%253B3:Raumkosten;" firstRangeIndex="63050" positionName="Raum- und Grundstückskosten" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Versicherungen und Beitr&amp;#228;ge;" firstRangeIndex="64000" positionName="Versicherungen, Spenden, Abgaben" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Fahrzeugkosten;" positionName="Kfz-Kosten" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Fahrzeugkosten #1;" firstRangeIndex="65000" positionName="Kfz-Kosten" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Fahrzeugkosten #2;" firstRangeIndex="65900" positionName="Kfz-Kosten" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:Werbe- und Reisekosten;" firstRangeIndex="66000" positionName="Werbe-/Reisekosten" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Fremdleistungen/Fremdarbeiten;" firstRangeIndex="67800" positionName="Dienstleistungen" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Porto/Telekommunikation;" firstRangeIndex="68000" positionName="IT und Kommunikation" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Fortbildungskosten;" firstRangeIndex="68210" positionName="Sonstiges" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Buchf&amp;#252;hrung, Pr&amp;#252;fung;" firstRangeIndex="68270" positionName="Beratung" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Rechts- und Beratungskosten;" firstRangeIndex="68250" positionName="Beratung" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Verlust aus Anlagenabgang;" positionName="Sonstiges" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Erl&amp;#246;se aus Verkauf (bei Buchverlust);" firstRangeIndex="68840" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Anlagenabgang Restbuchwert (bei Buchverlust);" firstRangeIndex="68950" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Verlust aus Anlagenabgang;" firstRangeIndex="69000" positionName="Sonstiges" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:Sonstiges;" positionName="Sonstiges" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Sonstiges #1;" firstRangeIndex="63000" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstiges #2;" firstRangeIndex="64300" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstiges #3;" firstRangeIndex="68220" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstiges #4;" firstRangeIndex="68560" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstiges #5;" firstRangeIndex="69100" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstiges #6;" firstRangeIndex="69250" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstiges #7;" firstRangeIndex="78000" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Betriebsfremd, periodenfremd, unregelm&amp;#228;&amp;#223;ig;" positionName="Sonstiges" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Betriebsfremd, periodenfremd, unregelm&amp;#228;&amp;#223;ig #1;" firstRangeIndex="69600" positionName="Sonstiges" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Betriebsfremd, periodenfremd, unregelm&amp;#228;&amp;#223;ig #2;" firstRangeIndex="69670" positionName="Sonstiges" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:Kursdifferenzen, Bewertung Finanzmittelfonds;" firstRangeIndex="68800" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Nicht abzugsf&amp;#228;hige Vorsteuer;" firstRangeIndex="68600" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Spenden;" firstRangeIndex="63900" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Forderungsverluste und Einstellung in die Wertberichtigung;" positionName="Sonstiges" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Forderungsverluste und Einstellung in die Wertberichtigung #1;" firstRangeIndex="69200" positionName="Sonstiges" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Forderungsverluste und Einstellung in die Wertberichtigung #2;" firstRangeIndex="69300" positionName="Sonstiges" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:Ausgleichsabgabe Schwerbehindertengesetz;" firstRangeIndex="64400" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Kosten bei Anwendung des Umsatzkostenverfahrens;" firstRangeIndex="69900" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Kosten der Warenabgabe;" firstRangeIndex="67000" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Reparatur und Instandhaltung;" firstRangeIndex="64500" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:EDV;" firstRangeIndex="64950" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Mietleasing;" positionName="Sonstiges" positionType="0">
+            <NumberRange nameData="417:20:%253B3:Mietleasing #1;" firstRangeIndex="64980" positionName="Sonstiges" positionType="0" />
+            <NumberRange nameData="417:20:%253B3:Mietleasing #2;" firstRangeIndex="68400" positionName="Sonstiges" positionType="0" />
+          </NumberRange>
+          <NumberRange nameData="417:20:%253B3:Aufwand f&amp;#252;r Gew&amp;#228;hrleistung;" firstRangeIndex="67900" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:B&amp;#252;robedarf;" firstRangeIndex="68150" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Zeitschriften, B&amp;#252;cher;" firstRangeIndex="68200" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Nebenkosten des Geldverkehrs;" firstRangeIndex="68550" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Betriebsbedarf;" firstRangeIndex="68500" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Werkzeuge, Kleinger&amp;#228;te;" firstRangeIndex="68450" positionName="Sonstiges" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:kalkulatorische Kosten;" firstRangeIndex="69700" positionName="Sonstiges" positionType="0" />
+        </NumberRange>
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:9. Finanzergebnis;">
+        <NumberRange nameData="417:20:%253B3:Ertr&amp;#228;ge aus Beteiligungen;" firstRangeIndex="70000" positionName="Erträge aus Beteiligungen" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Ertr&amp;#228;ge aus anderen Wertpapieren und Ausleihungen;" firstRangeIndex="70100" positionName="Erträge aus anderen Wertpapieren und Ausleihungen des Finanzanlagevermögens" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Sonstige Zinsen und &amp;#228;hnliche Ertr&amp;#228;ge;" positionName="Sonstige Zinsen und ähnliche Erträge" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Sonstige Zinsen und &amp;#228;hnliche Ertr&amp;#228;ge #1;" firstRangeIndex="71000" positionName="Sonstige Zinsen und ähnliche Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstige Zinsen und &amp;#228;hnliche Ertr&amp;#228;ge #2;" firstRangeIndex="71090" positionName="Sonstige Zinsen und ähnliche Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Erl&amp;#246;se Zinsen und Diskontertr&amp;#228;ge;" firstRangeIndex="71300" positionName="Sonstige Zinsen und ähnliche Erträge" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:Abschreibungen auf Finanzanlagen und Wertpapiere des Umlaufverm&amp;#246;gens;" firstRangeIndex="72000" positionName="Abschreibungen auf Finanzanlagen und auf Wertpapiere des Umlaufvermögens" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Zinsen und &amp;#228;hnliche Aufwendungen;" firstRangeIndex="73000" positionName="Zinsaufwendungen Extern" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Aufwendungen aus Verlust&amp;#252;bernahme/Gewinnabf&amp;#252;hrung;" firstRangeIndex="73900" positionName="Zinsaufwendungen Intern" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Auf Grund einer Gewinngemeinschaft, eines Gewinn- oder Teilgewinnabf&amp;#252;hrungsvertrags abgef&amp;#252;hrte Gewinne;" firstRangeIndex="73920" positionName="Zinsaufwendungen Intern" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Ertr&amp;#228;ge aus Verlust&amp;#252;bernahme/Gewinnabf&amp;#252;hrung;" firstRangeIndex="71900" positionName="Sonstige Zinsen und ähnliche Erträge" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Auf Grund einer Gewinngemeinschaft, eines Gewinn- oder Teilgewinnabf&amp;#252;hrungsvertrags erhaltene Gewinne;" firstRangeIndex="71920" positionName="Sonstige Zinsen und ähnliche Erträge" positionType="0" />
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:10. Au&amp;#223;erordentliches Ergebnis;">
+        <NumberRange nameData="417:20:%253B3:Au&amp;#223;erordentliche Ertr&amp;#228;ge;" positionName="Außerordentliche Erträge" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Au&amp;#223;erordentliche Ertr&amp;#228;ge;" firstRangeIndex="74000" positionName="Außerordentliche Erträge" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Ertr&amp;#228;ge aus Kapitalherabsetzung;" firstRangeIndex="77550" positionName="Außerordentliche Erträge" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:Au&amp;#223;erordentliche Aufwendungen;" firstRangeIndex="75000" positionName="Außerordentliche Aufwendungen" positionType="0" />
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:11. Steuern;">
+        <NumberRange nameData="417:20:%253B3:Steuern vom Einkommen und Ertrag;" positionName="Steuern vom Einkommen und Ertrag" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Steuern vom Einkommen und Ertrag #1;" firstRangeIndex="76000" positionName="Steuern vom Einkommen und Ertrag" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Steuern vom Einkommen und Ertrag #2;" firstRangeIndex="76420" positionName="Steuern vom Einkommen und Ertrag" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Gewerbesteuer;" firstRangeIndex="76100" positionName="Steuern vom Einkommen und Ertrag" positionType="0" />
+        </NumberRange>
+        <NumberRange nameData="417:20:%253B3:Sonstige Steuern;" positionName="Sonstige Steuern" positionType="0">
+          <NumberRange nameData="417:20:%253B3:Sonstige Steuern #1;" firstRangeIndex="76500" positionName="Sonstige Steuern" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Sonstige Steuern #2;" firstRangeIndex="76750" positionName="Sonstige Steuern" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Grundsteuer;" firstRangeIndex="76800" positionName="Sonstige Steuern" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:Steuererstattung;" firstRangeIndex="76920" positionName="Sonstige Steuern" positionType="0" />
+          <NumberRange nameData="417:20:%253B3:KFZ-Steuern;" firstRangeIndex="76850" positionName="Sonstige Steuern" positionType="0" />
+        </NumberRange>
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:Gewinnvortrag/Verlustvortrag nach Verwendung;" firstRangeIndex="77000" positionName="Einstellungen in die Kapitalrücklage" positionType="0" />
+      <NumberRange nameData="417:20:%253B3:Einstellungen in die Kapitalr&amp;#252;cklage nach den Vorschriften &amp;#252;ber die vereinfachte Kapitalherabsetzung;" firstRangeIndex="77600" positionName="Einstellungen in die Kapitalrücklage" positionType="0" />
+      <NumberRange nameData="417:20:%253B3:Entnahmen aus den R&amp;#252;cklagen;">
+        <NumberRange nameData="417:20:%253B3:Entnahmen aus der Kapitalr&amp;#252;cklage;" firstRangeIndex="77300" positionName="Entnahmen aus der Kapitalrücklage" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Entnahmen aus Gewinnr&amp;#252;cklagen aus der gesetzlichen R&amp;#252;cklage;" firstRangeIndex="77350" positionName="Entnahmen aus den Gewinnrücklagen" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Entnahmen aus Gewinnr&amp;#252;cklagen aus der R&amp;#252;cklage f&amp;#252;r eigene Anteile;" firstRangeIndex="77400" positionName="Entnahmen aus den Gewinnrücklagen" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Entnahmen aus der R&amp;#252;cklage f&amp;#252;r Anteile an einem herrschenden oder mehrheitlich beteiligten Unternehmen;" firstRangeIndex="77430" positionName="Entnahmen aus der Kapitalrücklage" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Entnahmen aus Gewinnr&amp;#252;cklagen aus satzungsm&amp;#228;&amp;#223;igen R&amp;#252;cklagen;" firstRangeIndex="77450" positionName="Entnahmen aus den Gewinnrücklagen" positionType="0" />
+        <NumberRange nameData="417:20:%253B3:Entnahmen aus Gewinnr&amp;#252;cklagen aus anderen Gewinnr&amp;#252;cklagen;" firstRangeIndex="77500" positionName="Entnahmen aus den Gewinnrücklagen" positionType="0" />
+      </NumberRange>
+      <NumberRange nameData="417:20:%253B3:Aussch&amp;#252;ttungen;" firstRangeIndex="77900" positionName="Entnahmen aus den Gewinnrücklagen" positionType="0" />
+    </NumberRange>
+  </AssignedRootNumberRange>
+  <NonAssignedRootNumberRange nameData="417:20:de%25253BDE%25253BDeutsch%253B3:Nummernkreise, die nicht zugeordnet werden sollen:;">
+    <NumberRange nameData="417:20:%253B3:Ausstehende Einlagen auf das gezeichnete Kapital;" firstRangeIndex="0" />
+    <NumberRange nameData="417:20:%253B3:Aufwendung f&amp;#252;r die Ingangsetzung des Gesch&amp;#228;ftsbetriebs;" firstRangeIndex="950" />
+    <NumberRange nameData="417:20:%253B3:Aufwendungen f&amp;#252;r die W&amp;#228;hrungsumstellung;" firstRangeIndex="960" />
+    <NumberRange nameData="417:20:%253B3:Kapital Personenhandelsgesellschaften;" firstRangeIndex="20000" />
+    <NumberRange nameData="417:20:%253B3:Privat;" firstRangeIndex="21000" />
+    <NumberRange nameData="417:20:%253B3:Sonderposten mit R&amp;#252;cklageanteil;" firstRangeIndex="29800" />
+    <NumberRange nameData="417:20:%253B3:Sonderposten f&amp;#252;r Zusch&amp;#252;sse und Zulagen;" firstRangeIndex="29990" />
+    <NumberRange nameData="417:20:%253B3:Vortrag auf neue Rechnung;" firstRangeIndex="77950" />
+    <NumberRange nameData="417:20:%253B3:Sonstige 9000er-Konten;" firstRangeIndex="90000" />
+  </NonAssignedRootNumberRange>
+</AccountFramework>

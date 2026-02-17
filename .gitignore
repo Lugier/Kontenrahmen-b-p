@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Data and Cache
+*.db
+.pytest_cache/
+pipeline_log.txt
+
+# Outputs
+output/
+output_*/
+
+# Data files (usually sensitive or large)
+*.xlsx
+*.xls
+*.csv
+# But allow the example target mapping if explicitly needed
+# !Examples/Lucanet Einlesen Automation/Unsere_Lucanet_Zuordnung.xls
+
+# Temp files
+temp_*
+
+# Debugging
+debug/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
