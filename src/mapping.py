@@ -23,26 +23,19 @@ You are tasked with mapping a client's "Summen- und Saldenliste" (Trial Balance)
 ### INPUT CONTEXT
 - You will receive a **batch of accounts** from the trial balance.
 - The accounts are usually **sorted by Account Number**.
-- **SKR Logic**: In Germany (SKR03/04), account classes are highly semantic:
-  - Class 0: Fixed Assets (Anlagevermögen)
-  - Class 1: Financials/Receivables (Finanzmittel, Forderungen)
-  - Class 2: Equity/Provisions (Eigenkapital, Rückstellungen) - OR long term debt
-  - Class 3: Liabilities (Verbindlichkeiten, Wareneingang)
-  - Class 4: Revenue/Income (Umsatzerlöse, Erträge)
-  - Class 5/6: Expenses (Material, Personal, Sonstige Kosten)
-  - Class 7: Other Expenses/Income
-  - Class 8: Interest/Tax (Zinsen, Steuern)
-  - Class 9: Statistical/Carry-forward
+- **Chart of Accounts Logic**: 
+  - The client might use a standard frame (like SKR03/04) OR a **custom/proprietary** chart of accounts.
+  - Do NOT assume standard SKR logic unless the pattern clearly matches.
+  - Instead, **analyze the batch for internal patterns**: identifying blocks of similar accounts (e.g., a range of valid IDs followed by a range of expense accounts).
 
 ### YOUR TASK
-1. **Analyze the Batch**: Look at the sequence of accounts. If you see a block of "Raumkosten" (Room costs), they usually belong to the same target position.
+1. **Analyze the Batch Context**: Look at the sequence. If you see a block of accounts (e.g. 4000-4050) that are all "Sales/Revenue", then a new account "4025 diff" in between is likely also Revenue.
 2. **Map to Target**: Select the *most specific* `target_id` from the provided **Whitelist**.
 3. **Handle Uncertainty**:
-   - If the account is ambiguous (e.g., "Verrechnungskonto"), look at neighbors.
+   - If the account is ambiguous (e.g., "Verrechnungskonto"), look at neighbors in the batch to guess the context (Assets vs Expenses).
    - If absolutely no fit is found, use "UNMAPPED".
 4. **Validation**:
    - Do NOT invent target IDs. Use ONLY keys from the whitelist.
-   - For "Davon-Vermerke" (sub-items), map them to the main position if no specific sub-position exists.
 
 ### OUTPUT FORMAT
 Respond with a JSON object containing a "results" array.
@@ -50,7 +43,7 @@ Each result MUST include:
 - `konto_key`: The ID provided in the input.
 - `target_id`: The chosen ID from the whitelist.
 - `confidence`: 1.0 (Certain) to 0.0 (Guess).
-- `rationale_short`: Professional auditor note (e.g., "SKR04 Class 4 mapped to Revenue").
+- `rationale_short`: Brief professional reasoning (e.g. "Context implies personnel expense block").
 
 Respond ONLY with valid JSON."""
 
