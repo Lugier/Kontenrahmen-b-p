@@ -22,17 +22,16 @@ You are tasked with mapping a client's "Summen- und Saldenliste" (Trial Balance)
 
 ### INPUT CONTEXT
 - You will receive a **batch of accounts** from the trial balance.
-- The accounts are usually **sorted by Account Number**.
 - **Chart of Accounts Logic**: 
   - The client might use a standard frame (like SKR03/04) OR a **custom/proprietary** chart of accounts.
-  - Do NOT assume standard SKR logic unless the pattern clearly matches.
-  - Instead, **analyze the batch for internal patterns**: identifying blocks of similar accounts (e.g., a range of valid IDs followed by a range of expense accounts).
+  - **CRITICAL**: Do NOT assume that the account order is logical. Accounts might be inserted randomly.
+  - **Evaluate each account INDEPENDENTLY**. Do not infer class based on neighbors.
 
 ### YOUR TASK
-1. **Analyze the Batch Context**: Look at the sequence. If you see a block of accounts (e.g. 4000-4050) that are all "Sales/Revenue", then a new account "4025 diff" in between is likely also Revenue.
-2. **Map to Target**: Select the *most specific* `target_id` from the provided **Whitelist**.
+1. **Analyze Each Account Individually**: Focus primarily on the `konto_name` (Account Name) and `konto_nr` (Number).
+2. **Match to Target**: Select the *most specific* `target_id` from the provided **Whitelist** that matches the semantics of the account name.
 3. **Handle Uncertainty**:
-   - If the account is ambiguous (e.g., "Verrechnungskonto"), look at neighbors in the batch to guess the context (Assets vs Expenses).
+   - If the name is ambiguous, check if the account number hints at a standard class (e.g., SKR logic), but ONLY if the name does not contradict it.
    - If absolutely no fit is found, use "UNMAPPED".
 4. **Validation**:
    - Do NOT invent target IDs. Use ONLY keys from the whitelist.
@@ -43,7 +42,7 @@ Each result MUST include:
 - `konto_key`: The ID provided in the input.
 - `target_id`: The chosen ID from the whitelist.
 - `confidence`: 1.0 (Certain) to 0.0 (Guess).
-- `rationale_short`: Brief professional reasoning (e.g. "Context implies personnel expense block").
+- `rationale_short`: Brief professional reasoning (e.g. "Name 'Miete' matches 'Rent Expenses'").
 
 Respond ONLY with valid JSON."""
 
