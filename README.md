@@ -12,11 +12,10 @@ Diese Pipeline löst eines der zeitaufwendigsten Probleme in der Finanzberatung:
 ## 🌟 Key Highlights
 
 *   **🧠 Semantisches Verständnis**: Statt regulärer Ausdrücke nutzt die Pipeline LLMs, um die *Bedeutung* eines Kontos zu verstehen.
-*   **🧩 Nachbarschafts-Kontext (Smart Batching)**: Die KI sieht bei jedem Konto auch die umliegenden Konten, um Bereichslogiken (z.B. Kontenrahmen-Blöcke) besser zu erkennen.
-*   **⚡ Interne Deduplizierung**: Gleiche Konten über verschiedene Zeiträume werden nur einmal gemappt – das spart bis zu 80% der Tokens und erhöht die Konsistenz.
 *   **📐 Dynamische Grid-Erkennung**: Erkennt automatisch, wo eine Tabelle in einem Excel-Sheet beginnt und endet, selbst bei komplexen Headern oder Leerzeilen.
 *   **⚖️ Bilanz-Integrität**: Jedes Mapping wird gegen die ursprüngliche Bilanzsumme validiert. Sollte die Bilanz nicht aufgehen, startet die KI einen automatischen Reparaturprozess.
-*   **🔍 Klassen-Heuristik**: Integrierte Logik für Standard-Kontenrahmen (z.B. SKR03/04) gibt der KI Vorab-Hinweise auf die wahrscheinlichste Kontenklasse.
+*   **🥇 Professional Accountant Logic**: Der KI-Auditor agiert mit explizitem Wissen über SKR03/04 und prüft Mappings auf fachliche Plausibilität.
+*   **🔄 Vorzeichen-Logik**: Erkennt automatisch, ob Daten nach der Soll/Haben-Logik oder der Vorzeichen-Logik (LucaNet Standard) strukturiert sind und konvertiert diese fehlerfrei.
 
 ---
 
