@@ -9,6 +9,7 @@ import logging
 import os
 import re
 import sqlite3
+import threading
 import time
 from pathlib import Path
 from typing import Any, Dict, Optional
@@ -62,14 +63,14 @@ class LLMClient:
         self.client = OpenAI(api_key=self.api_key, http_client=http_client)
         self.max_retries = max_retries
 
-        # SQLite cache
+        # SQLite cache — thread-local connections (safe for ThreadPoolExecutor)
         self.cache_db_path = Path(cache_db_path)
-        self._conn = sqlite3.connect(str(self.cache_db_path))
-        self._conn.execute(_CREATE_CACHE_TABLE)
-        self._conn.commit()
+        self._local = threading.local()   # each thread gets its own .conn
+        self._ensure_schema()             # create table in main thread conn
 
         self._call_count = 0
         self._total_tokens = 0
+        self._stats_lock = threading.Lock()
 
     # ------------------------------------------------------------------
     # Public API
@@ -162,6 +163,17 @@ class LLMClient:
     # Internal
     # ------------------------------------------------------------------
 
+    def _get_conn(self) -> sqlite3.Connection:
+        """Return a per-thread SQLite connection (creates one if needed)."""
+        if not hasattr(self._local, "conn") or self._local.conn is None:
+            self._local.conn = sqlite3.connect(str(self.cache_db_path))
+        return self._local.conn
+
+    def _ensure_schema(self) -> None:
+        conn = self._get_conn()
+        conn.execute(_CREATE_CACHE_TABLE)
+        conn.commit()
+
     def _call_with_retry(
         self,
         messages: list,
@@ -206,8 +218,9 @@ class LLMClient:
                 prompt_tokens = getattr(response.usage, "prompt_tokens", 0) or 0
                 completion_tokens = getattr(response.usage, "completion_tokens", 0) or 0
 
-                self._call_count += 1
-                self._total_tokens += prompt_tokens + completion_tokens
+                with self._stats_lock:
+                    self._call_count += 1
+                    self._total_tokens += prompt_tokens + completion_tokens
 
                 logger.info(
                     "LLM call #%d: %d prompt + %d completion tokens, %dms",
@@ -270,18 +283,22 @@ class LLMClient:
         return hashlib.sha256(payload.encode()).hexdigest()
 
     def _get_cache(self, key: str) -> Optional[str]:
-        row = self._conn.execute(
+        row = self._get_conn().execute(
             "SELECT response_text FROM llm_cache WHERE cache_key = ?", (key,)
         ).fetchone()
         return row[0] if row else None
 
     def _set_cache(self, key: str, response_text: str) -> None:
-        self._conn.execute(
+        conn = self._get_conn()
+        conn.execute(
             "INSERT OR REPLACE INTO llm_cache (cache_key, model, response_text, created_at) "
             "VALUES (?, ?, ?, ?)",
             (key, self.model, response_text, time.time()),
         )
-        self._conn.commit()
+        conn.commit()
 
     def close(self):
-        self._conn.close()
+        # Close the main thread connection
+        if hasattr(self._local, "conn") and self._local.conn:
+            self._local.conn.close()
+            self._local.conn = None

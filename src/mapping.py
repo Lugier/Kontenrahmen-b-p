@@ -5,7 +5,8 @@ from __future__ import annotations
 
 import json
 import logging
-from typing import Any, Dict, List
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Any, Dict, List, Optional
 
 import pandas as pd
 
@@ -70,6 +71,9 @@ MAPPING_SCHEMA = {
 }
 
 
+MAX_PARALLEL_BATCHES = 10
+
+
 def map_accounts(
     llm_client: Any,
     accounts_df: pd.DataFrame,
@@ -103,24 +107,22 @@ def map_accounts(
             # No manual context/heuristics - rely on LLM reading the batch natively
         })
 
-    # Batch map
-    all_results: List[Dict] = []
+    # Batch map — alle Batches parallel senden (max MAX_PARALLEL_BATCHES gleichzeitig)
     n_batches = (len(items) + batch_size - 1) // batch_size
+    batches = [
+        (batch_idx, items[i:i + batch_size])
+        for batch_idx, i in enumerate(range(0, len(items), batch_size), start=1)
+    ]
 
-    for i in range(0, len(items), batch_size):
-        batch = items[i:i + batch_size]
-        curr_batch_idx = i // batch_size + 1
-
+    def _call_batch(batch_idx: int, batch: List[Dict]) -> tuple[int, List[Dict]]:
         prompt = (
             f"## LucaNet Target Positions (Whitelist):\n"
             f"{json.dumps(whitelist, ensure_ascii=False, indent=1)}\n\n"
-            f"## Trial Balance Accounts (Batch {curr_batch_idx}/{n_batches}):\n"
+            f"## Trial Balance Accounts (Batch {batch_idx}/{n_batches}):\n"
             f"{json.dumps(batch, ensure_ascii=False, indent=1)}\n\n"
             "Task: Map the accounts above to the Target Positions."
         )
-
-        logger.info(f"Mapping batch {curr_batch_idx}/{n_batches} ({len(batch)} accounts)...")
-
+        logger.info("Mapping batch %d/%d (%d accounts) — parallel ...", batch_idx, n_batches, len(batch))
         result = llm_client.call(
             prompt=prompt,
             system_prompt=PROMPT_ACCOUNT_MAPPER,
@@ -130,9 +132,24 @@ def map_accounts(
             reasoning_effort=reasoning_effort,
         )
         if isinstance(result, dict) and "results" in result:
-            all_results.extend(result["results"])
-        else:
-            logger.error(f"Failed to get results for batch {curr_batch_idx}")
+            return batch_idx, result["results"]
+        logger.error("Batch %d/%d: kein Ergebnis", batch_idx, n_batches)
+        return batch_idx, []
+
+    workers = min(MAX_PARALLEL_BATCHES, n_batches)
+    logger.info("Sende %d Batches parallel (%d Worker) ...", n_batches, workers)
+    batch_results: Dict[int, List[Dict]] = {}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(_call_batch, idx, batch): idx for idx, batch in batches}
+        for future in as_completed(futures):
+            batch_idx, res = future.result()
+            batch_results[batch_idx] = res
+            logger.info("Batch %d/%d fertig (%d Ergebnisse)", batch_idx, n_batches, len(res))
+
+    # Ergebnisse in Original-Batch-Reihenfolge zusammenführen
+    all_results: List[Dict] = []
+    for idx in sorted(batch_results):
+        all_results.extend(batch_results[idx])
 
     # Merge results into DataFrame
     result_map = {r["konto_key"]: r for r in all_results}

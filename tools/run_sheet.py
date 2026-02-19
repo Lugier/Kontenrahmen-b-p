@@ -13,6 +13,7 @@ from src.table_detect import detect_tables, extract_by_detection
 from src.normalize import rules_from_detection, apply_classification, deduplicate_accounts
 from src.targets import load_targets
 from src.mapping import map_accounts
+from src.dummy_mapper import load_dummy_pool, assign_dummy_ids, build_lucanet_df, save_lucanet_xlsx
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
@@ -21,6 +22,7 @@ log = logging.getLogger("sheet_run")
 def run_sheet(sheet_name):
     susa_path = "Examples/Lucanet Einlesen Automation/SuSa_Sammlung/SuSa_Sammlung.xlsx"
     targets_path = "Examples/Lucanet Einlesen Automation/Unsere_Lucanet_Zuordnung.xls"
+    dummy_pool_path = "Examples/Dummykonten_Zuordnung_hart.xlsx"
     out_dir = Path(f"./output/sheet_{sheet_name}")
     out_dir.mkdir(parents=True, exist_ok=True)
     
@@ -56,11 +58,8 @@ def run_sheet(sheet_name):
     classified = apply_classification(extracted, rules)
     classified = deduplicate_accounts(classified)
     
-    account_count_total = len(classified[classified["row_type"] == "ACCOUNT"])
-    # Limit to first 50 accounts for testing
-    classified = classified[classified["row_type"] == "ACCOUNT"].head(50)
-    account_count = len(classified)
-    log.info(f"Extracted {account_count_total} accounts, processing first {account_count} for test")
+    account_count = len(classified[classified["row_type"] == "ACCOUNT"])
+    log.info(f"Extracted {account_count} accounts")
     
     # 4. Map — batch_size=50 (optimal for reasoning models to finish within timeouts)
     log.info(f"Mapping all {account_count} accounts in batches of 50 (reasoning_effort='medium')...")
@@ -93,11 +92,20 @@ def run_sheet(sheet_name):
         for _, row in output_df.iterrows():
             f.write(f"{row['Kontonr & Bezeichnung']:<50} → [{row['Target ID']}] {row['Unsere Zuordnung (LucaNet)']}\n")
     log.info(f"TXT saved: {txt_path}")
-    
+
+    # 6. Lucanet Dummy-OID Zuordnung
+    log.info("Lade Dummy-Pool und weise OIDs zu...")
+    dummy_pool = load_dummy_pool(dummy_pool_path)
+    mapped_with_dummies = assign_dummy_ids(mapped_df, dummy_pool)
+    lucanet_df = build_lucanet_df(mapped_with_dummies)
+    lucanet_path = out_dir / f"Lucanet_Mapping_Blatt_{sheet_name}.xlsx"
+    save_lucanet_xlsx(lucanet_df, lucanet_path)
+
     print(f"\nDONE! {account_count} Konten gemapped.")
-    print(f"  Excel: {xlsx_path}")
-    print(f"  TXT:   {txt_path}")
-    
+    print(f"  Excel:         {xlsx_path}")
+    print(f"  TXT:           {txt_path}")
+    print(f"  Lucanet-Export:{lucanet_path} ({len(lucanet_df)} Zeilen mit Dummy-OID)")
+
     llm.close()
 
 if __name__ == "__main__":
