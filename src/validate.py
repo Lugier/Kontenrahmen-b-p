@@ -42,7 +42,6 @@ REPAIR_SCHEMA = {
     },
 }
 
-
 def run_checks(df: pd.DataFrame) -> Dict[str, Any]:
     """Run plausibility checks on the mapped data."""
     accounts = df[df["row_type"] == "ACCOUNT"].copy()
