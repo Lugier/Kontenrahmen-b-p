@@ -47,9 +47,7 @@ def main():
     from src.normalize import rules_from_detection, apply_classification, normalize_amounts, deduplicate_accounts
     from src.targets import load_targets, targets_to_whitelist
     from src.mapping import map_accounts
-    from src.signs import normalize_signs
     from src.validate import run_checks, repair_mappings
-    from src.xml_export import generate_xml
     from src.reporting import generate_report
 
     out_dir = Path(args.out)
@@ -121,17 +119,12 @@ def main():
     log.info("Mapping accounts to target positions...")
     full_df = map_accounts(llm, full_df, targets)
 
-    # ── Python: sign normalization (deterministic) ─────────────────────
-    # Use the sign convention from the first detection (most common case)
-    sign_conv = full_df["_sign_convention"].mode().iloc[0] if "_sign_convention" in full_df else "standard"
-    log.info("Sign convention: %s", sign_conv)
-    full_df, sign_info = normalize_signs(full_df, sign_conv)
-
     # ── Python: validate + optional LLM repair ─────────────────────────
     log.info("Running validation checks...")
     checks = run_checks(full_df)
-    log.info("Balance diff: %.2f (%.1f%%), Unmapped: %d",
-             checks["balance_diff"], checks["balance_diff_pct"], checks["unmapped_count"])
+    # log.info("Balance diff: %.2f (%.1f%%), Unmapped: %d",
+    #          checks["balance_diff"], checks["balance_diff_pct"], checks["unmapped_count"])
+    log.info("Unmapped: %d", checks["unmapped_count"])
 
     if checks["has_issues"]:
         log.info("Issues detected, running repair (max %d rounds)...", args.max_repair_rounds)
@@ -143,14 +136,7 @@ def main():
     log.info("Writing outputs...")
     full_df.to_csv(out_dir / "mapping.csv", index=False, encoding="utf-8-sig")
 
-    xml_path = generate_xml(
-        mapping_df=full_df,
-        template_xml_path=args.template_xml,
-        output_path=out_dir / "kontenrahmen.xml",
-    )
-    log.info("XML written to %s", xml_path)
-
-    generate_report(full_df, checks, sign_info, out_dir)
+    generate_report(full_df, checks, {}, out_dir)
 
     # Done
     log.info("━━━ Pipeline complete ━━━")

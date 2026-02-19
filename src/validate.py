@@ -49,32 +49,48 @@ def run_checks(df: pd.DataFrame) -> Dict[str, Any]:
     checks: Dict[str, Any] = {}
 
     # Balance check: Aktiva vs Passiva
-    aktiva = accounts[accounts["target_class"] == "AKTIVA"]["amount_normalized"].sum()
-    passiva = accounts[accounts["target_class"] == "PASSIVA"]["amount_normalized"].sum()
-    checks["aktiva_sum"] = float(aktiva) if pd.notna(aktiva) else 0
-    checks["passiva_sum"] = float(passiva) if pd.notna(passiva) else 0
-    checks["balance_diff"] = checks["aktiva_sum"] - checks["passiva_sum"]
-    checks["balance_diff_pct"] = (
-        abs(checks["balance_diff"]) / max(abs(checks["aktiva_sum"]), 1) * 100
-    )
+    has_amounts = "amount_normalized" in accounts.columns
+    
+    if has_amounts:
+        aktiva = accounts[accounts["target_class"] == "AKTIVA"]["amount_normalized"].sum()
+        passiva = accounts[accounts["target_class"] == "PASSIVA"]["amount_normalized"].sum()
+        checks["aktiva_sum"] = float(aktiva) if pd.notna(aktiva) else 0
+        checks["passiva_sum"] = float(passiva) if pd.notna(passiva) else 0
+        checks["balance_diff"] = checks["aktiva_sum"] - checks["passiva_sum"]
+        checks["balance_diff_pct"] = (
+            abs(checks["balance_diff"]) / max(abs(checks["aktiva_sum"]), 1) * 100
+        )
+    else:
+        checks["aktiva_sum"] = 0
+        checks["passiva_sum"] = 0
+        checks["balance_diff"] = 0
+        checks["balance_diff_pct"] = 0
 
     # GuV check
-    ertrag = accounts[accounts["target_class"] == "ERTRAG"]["amount_normalized"].sum()
-    aufwand = accounts[accounts["target_class"] == "AUFWAND"]["amount_normalized"].sum()
-    checks["ertrag_sum"] = float(ertrag) if pd.notna(ertrag) else 0
-    checks["aufwand_sum"] = float(aufwand) if pd.notna(aufwand) else 0
-    checks["guv_result"] = checks["ertrag_sum"] - checks["aufwand_sum"]
+    if has_amounts:
+        ertrag = accounts[accounts["target_class"] == "ERTRAG"]["amount_normalized"].sum()
+        aufwand = accounts[accounts["target_class"] == "AUFWAND"]["amount_normalized"].sum()
+        checks["ertrag_sum"] = float(ertrag) if pd.notna(ertrag) else 0
+        checks["aufwand_sum"] = float(aufwand) if pd.notna(aufwand) else 0
+        checks["guv_result"] = checks["ertrag_sum"] - checks["aufwand_sum"]
+    else:
+        checks["ertrag_sum"] = 0
+        checks["aufwand_sum"] = 0
+        checks["guv_result"] = 0
 
     # Unmapped / low confidence
     unmapped = accounts[accounts.get("target_overpos_id", pd.Series()) == "UNMAPPED"]
     checks["unmapped_count"] = len(unmapped)
-    checks["unmapped_total"] = float(unmapped["amount_normalized"].sum()) if len(unmapped) > 0 else 0
+    if has_amounts:
+        checks["unmapped_total"] = float(unmapped["amount_normalized"].sum()) if len(unmapped) > 0 else 0
+    else:
+        checks["unmapped_total"] = 0
 
     low_conf = accounts[accounts.get("confidence", pd.Series(dtype=float)) < 0.5]
     checks["low_confidence_count"] = len(low_conf)
 
     checks["total_accounts"] = len(accounts)
-    checks["has_issues"] = checks["balance_diff_pct"] > 10 or checks["unmapped_count"] > 0
+    checks["has_issues"] = (checks["balance_diff_pct"] > 10 if has_amounts else False) or checks["unmapped_count"] > 0
 
     return checks
 
