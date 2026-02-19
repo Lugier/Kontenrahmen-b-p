@@ -16,7 +16,6 @@ from .io_readers import parse_number
 
 logger = logging.getLogger(__name__)
 
-
 # ---------------------------------------------------------------------------
 # Pydantic models
 # ---------------------------------------------------------------------------
@@ -38,7 +37,6 @@ class RowClassificationRules(BaseModel):
     amount_strategy: str = "end_balance"
     sign_column_rule: str = "none"
     language: str = "de"
-
 
 def rules_from_detection(detection: Any) -> RowClassificationRules:
     """Build RowClassificationRules from a Phase 1 TableDetection result.
