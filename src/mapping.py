@@ -42,7 +42,7 @@ Each result MUST include:
 - `konto_key`: The ID provided in the input.
 - `target_id`: The chosen ID from the whitelist.
 - `confidence`: 1.0 (Certain) to 0.0 (Guess).
-- `rationale_short`: Brief professional reasoning (e.g. "Name 'Miete' matches 'Rent Expenses'").
+- `rationale_short`: Brief professional reasoning in GERMAN (e.g. "Name 'Miete' entspricht 'Mietaufwand'").
 
 Respond ONLY with valid JSON."""
 

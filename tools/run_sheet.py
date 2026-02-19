@@ -1,11 +1,16 @@
 import os
-import pandas as pd
+import sys
 import logging
+import pandas as pd
 from pathlib import Path
+
+# Add project root to sys.path to allow importing from src
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.llm_client import LLMClient
 from src.io_readers import read_excel
 from src.table_detect import detect_tables, extract_by_detection
-from src.normalize import rules_from_detection, apply_classification, normalize_amounts, deduplicate_accounts
+from src.normalize import rules_from_detection, apply_classification, deduplicate_accounts
 from src.targets import load_targets
 from src.mapping import map_accounts
 
@@ -16,7 +21,7 @@ log = logging.getLogger("sheet_run")
 def run_sheet(sheet_name):
     susa_path = "Examples/Lucanet Einlesen Automation/SuSa_Sammlung/SuSa_Sammlung.xlsx"
     targets_path = "Examples/Lucanet Einlesen Automation/Unsere_Lucanet_Zuordnung.xls"
-    out_dir = Path(f"./output_sheet_{sheet_name}")
+    out_dir = Path(f"./output/sheet_{sheet_name}")
     out_dir.mkdir(parents=True, exist_ok=True)
     
     model = "gpt-5-mini-2025-08-07"
@@ -49,11 +54,13 @@ def run_sheet(sheet_name):
     extracted = extract_by_detection(df, det)
     rules = rules_from_detection(det)
     classified = apply_classification(extracted, rules)
-    classified = normalize_amounts(classified, rules.amount_strategy, language_hint=det.language_guess)
     classified = deduplicate_accounts(classified)
     
-    account_count = len(classified[classified["row_type"] == "ACCOUNT"])
-    log.info(f"Extracted {account_count} accounts")
+    account_count_total = len(classified[classified["row_type"] == "ACCOUNT"])
+    # Limit to first 50 accounts for testing
+    classified = classified[classified["row_type"] == "ACCOUNT"].head(50)
+    account_count = len(classified)
+    log.info(f"Extracted {account_count_total} accounts, processing first {account_count} for test")
     
     # 4. Map — batch_size=50 (optimal for reasoning models to finish within timeouts)
     log.info(f"Mapping all {account_count} accounts in batches of 50 (reasoning_effort='medium')...")
@@ -84,7 +91,7 @@ def run_sheet(sheet_name):
         f.write(f"Mapping Blatt {sheet_name} — {account_count} Konten\n")
         f.write("=" * 80 + "\n\n")
         for _, row in output_df.iterrows():
-            f.write(f"{row['Kontonr & Bezeichnung']:<50} → {row['Unsere Zuordnung (LucaNet)']}\n")
+            f.write(f"{row['Kontonr & Bezeichnung']:<50} → [{row['Target ID']}] {row['Unsere Zuordnung (LucaNet)']}\n")
     log.info(f"TXT saved: {txt_path}")
     
     print(f"\nDONE! {account_count} Konten gemapped.")
